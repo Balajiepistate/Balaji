@@ -1,0 +1,1 @@
+<h2>Patient Registration</h2><form method='post'><input name='name'><button type='submit'>Register</button></form>
