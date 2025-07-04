@@ -1,5 +1,7 @@
+
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -43,4 +45,6 @@ def dashboard():
     return render_template('dashboard.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))  # use PORT from Render or fallback to 5000
+    app.run(host='0.0.0.0', port=port)
+
