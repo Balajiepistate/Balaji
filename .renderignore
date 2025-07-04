@@ -1,0 +1,5 @@
+# Ignore local files not needed on Render
+*.pyc
+__pycache__/
+*.pkl
+.env
